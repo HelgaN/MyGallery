@@ -1,7 +1,9 @@
 class Gallery {
   constructor() {
     this.buttonPrev = document.querySelector(`.slider__button--prev`);
+    this.buttonPrevImg = document.querySelector(`.slider__button--prev img`);
     this.buttonNext = document.querySelector(`.slider__button--next`);
+    this.buttonNextImg = document.querySelector(`.slider__button--next img`);
     this.slides = document.querySelectorAll(`.slider__item`);
     this.ITEMS = [
       {
@@ -62,12 +64,14 @@ class Gallery {
         this.slides[num - 1].classList.add("slider__item--current");
         switch (num) {
           case 2:
+            this.buttonNext.style.opacity = `1`;
             this.slides[num].classList.add("animation-slide--three-two");
             this.slides[num - 1].classList.add("animation-slide--three-two");
             this.slides[num].classList.remove("animation-slide--two-three");
             this.slides[num - 1].classList.remove("animation-slide--two-three");
             break;
           case 1:
+            this.buttonPrev.style.opacity = `0.3`;
             this.slides[num].classList.add("animation-slide--two-one");
             this.slides[num - 1].classList.add("animation-slide--two-one");
             if(this.slides[num].classList.contains("animation-slide--three-two") && this.slides[num + 1].classList.contains("animation-slide--three-two")) {
@@ -90,6 +94,7 @@ class Gallery {
         this.slides[num + 1].classList.add("slider__item--current");
         switch (num) {
           case 0:
+            this.buttonPrev.style.opacity = `1`;
             this.slides[num].classList.add("animation-slide--one-two");
             this.slides[num + 1].classList.add("animation-slide--one-two");
             if(this.slides[num].classList.contains("animation-slide--two-one") && this.slides[num + 1].classList.contains("animation-slide--two-one")) {
@@ -98,6 +103,7 @@ class Gallery {
             }
             break;
           case 1:
+            this.buttonNext.style.opacity = `0.3`;
             this.slides[num].classList.add("animation-slide--two-three");
             this.slides[num + 1].classList.add("animation-slide--two-three");
             this.slides[num].classList.remove("animation-slide--one-two");

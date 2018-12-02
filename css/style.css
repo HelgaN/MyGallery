@@ -611,6 +611,7 @@ body {
 
 .slider__button--prev {
   left: 8px;
+  opacity: 0.3;
   -webkit-transform: scaleX(-1);
       -ms-transform: scaleX(-1);
           transform: scaleX(-1);
