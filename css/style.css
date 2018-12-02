@@ -393,6 +393,7 @@ body {
 .container {
   position: relative;
   width: 1170px;
+  padding: 0 50px;
   margin: -570px auto 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -446,7 +447,7 @@ body {
 }
 
 .gallery__list--two {
-  margin-top: -20px;
+  margin-top: -35px;
 }
 
 .gallery__item {
@@ -521,6 +522,7 @@ body {
 }
 
 .link-label {
+  margin-top: 15px;
   padding-right: 300px;
   font-size: 14px;
   line-height: 20px;
@@ -533,7 +535,7 @@ body {
 .slider {
   position: absolute;
   top: 110px;
-  left: 0;
+  left: 50px;
   -webkit-box-shadow: 12px 68px 131px 0px rgba(0, 0, 0, 0.35);
           box-shadow: 12px 68px 131px 0px rgba(0, 0, 0, 0.35);
 }
