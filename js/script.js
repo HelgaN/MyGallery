@@ -5,32 +5,32 @@ class Gallery {
     this.slides = document.querySelectorAll(`.slider__item`);
     this.ITEMS = [
       {
-        name: `Fox`,
+        name: `Лисий нос`,
         src: [`img/fox-nose-1.jpg`, `img/fox-nose-2.jpg`, `img/fox-nose-3.jpg`],
         background: `img/background-nose.jpg`
       },
       {
-        name: `Marshal`,
+        name: `пр. Маршала Блюхера`,
         src: [`img/marshal.jpg`, `img/marshal.jpg`, `img/marshal.jpg`],
         background: `img/background-marshal.jpg`
       },
       {
-        name: `Dolgo`,
+        name: `ул. Долгоозерная`,
         src: [`img/dolgo.jpg`, `img/dolgo.jpg`, `img/dolgo.jpg`],
         background: `img/background-dolgo.jpg`
       },
       {
-        name: `Bogot`,
+        name: `пр. Богатырский`,
         src: [`img/bogot.jpg`, `img/bogot.jpg`, `img/bogot.jpg`],
         background: `img/background-bogot.jpg`
       },
       {
-        name: `Kolom`,
+        name: `пр. Коломяжский`,
         src: [`img/kolom.jpg`, `img/kolom.jpg`, `img/kolom.jpg`],
         background: `img/background-kolom.jpg`
       },
       {
-        name: `Narod`,
+        name: `Народного ополчения`,
         src: [`img/narod.jpg`, `img/narod.jpg`, `img/narod.jpg`],
         background: `img/background-narod.jpg`
       }
@@ -38,6 +38,7 @@ class Gallery {
 
     this.galleryItems = document.querySelectorAll(`.gallery__item`);
     this.sliderImgs = document.querySelectorAll(`.slider__img`);
+    this.sliderTitle = document.querySelector(`.slider__title`);
     this.background = document.querySelector(`.background`);
   }
 
@@ -117,6 +118,7 @@ class Gallery {
         this.sliderImgs.forEach((item, i) => {
           item.src = this.ITEMS[num].src[i];
           background.style.backgroundImage = `url("${this.ITEMS[num].background}`;
+          this.sliderTitle.textContent = this.ITEMS[num].name;
         });
       });
     });
